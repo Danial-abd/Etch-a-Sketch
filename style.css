@@ -1,0 +1,249 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body{
+    background-color: #F8F9FA;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+    /* gap: 20px; */
+}
+
+.mcontainer{
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-end;
+  /* flex-wrap: wrap; */
+}
+
+.ctnsi{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonContainer {
+  /* border: 1px solid black; */
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.header{
+  width: 100%;
+  margin: 15px;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.canvasCon{
+  width: 100%;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 50px;
+}
+
+.btnClrP{
+  display: flex;
+  border-radius: 10px;
+  padding: 5px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; 
+  align-content: center;
+  margin: 20px;
+}
+
+.canvas-frame{
+  background-color: #04AA6D;
+  width: 640px;
+  border-radius: 20px;
+}
+
+.container-box{
+  aspect-ratio: 1/1;
+}
+
+.box-color{
+  /* border: hidden; */
+  border: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+.showBorder{
+  border-width: 1px;
+  border-color: rgb(179, 176, 176);
+  border-style: dashed;
+}
+
+.hideBorder{
+  border-style: hidden;
+}
+
+.colorPicker{
+  opacity: 0;
+}
+
+/*Slider*/
+.slidecontainer {
+  width: 800px; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  /* -webkit-appearance: none;  Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 10px; /* Specified height */
+  border-radius: 5px;
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  /* -webkit-appearance: none; Override default look */
+  appearance: none;
+  width: 15px; /* Set a specific slider handle width */
+  height: 15px; /* Slider handle height */
+  border-radius: 50%;
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  border-radius: 50%;
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+/* button style */
+button {
+  margin: 0;
+  max-width: 320px;
+  padding: 0.875rem 1.75rem;
+  background-color: #04AA6D;
+  color: #ffffff;
+  font-size: 15px;
+  white-space: nowrap;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: none;
+}
+
+ .active{
+  outline: 3px solid #056945;
+}
+
+.btnCpicker{
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 72px 0.875rem 1.75rem;
+}
+
+button .picked-color {
+  display: grid;
+  position: absolute;
+  right: 0;
+  place-items: center;
+  width: 3rem;
+  height: 100%;
+}
+
+.picked-color{
+  background-color: #028555;
+}
+
+button span{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+button:hover {
+  box-shadow:
+    0 4px 30px rgba(4, 175, 255, 0.1),
+    0 2px 30px rgba(11, 158, 255, 0.06);
+}
+/* end button style */
+
+/* @media(min-width: ) */
+
+@media(max-width: 980px){
+  .canvas-frame{
+    width: 100%;
+    min-width: 10px;
+  }
+  
+  .canvasCon{
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .buttonContainer{
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    width: 100%;
+    gap: 10px;
+  }
+
+  .mcontainer{
+    gap: 10px;
+  }
+}
+
+@media(max-width: 1000px){
+  .slidecontainer{
+  width: 80%;
+}
+}
+
